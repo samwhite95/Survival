@@ -101,13 +101,13 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.75
     agentHeight: 1.2
-    agentSlope: 14
-    agentClimb: 0.34
+    agentSlope: 43.5
+    agentClimb: 0.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    minRegionArea: 2
+    minRegionArea: 0.5
     manualCellSize: 1
-    cellSize: 0.25
+    cellSize: 0.03
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -938,6 +938,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 411924, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.1079
+      objectReference: {fileID: 0}
+    - target: {fileID: 411924, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 36.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 411924, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.0774642
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
   m_IsPrefabParent: 0
@@ -1119,7 +1131,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4294108362519968, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114679600986958998, guid: 1aca220af0efb314c884444b1842f0c4,
         type: 2}
@@ -1131,15 +1143,43 @@ Prefab:
       propertyPath: damageImage
       value: 
       objectReference: {fileID: 1009733905}
+    - target: {fileID: 54088238515392944, guid: 1aca220af0efb314c884444b1842f0c4,
+        type: 2}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1422449478 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1947781832000728, guid: 1aca220af0efb314c884444b1842f0c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1422449477}
 --- !u!114 &1422449479 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114679600986958998, guid: 1aca220af0efb314c884444b1842f0c4,
     type: 2}
   m_PrefabInternal: {fileID: 1422449477}
   m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+--- !u!114 &1422449480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422449478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5b1bfd17c5aa24e92881a4c57f17ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageIn: 50
+  range: 10
+  bullet: {fileID: 1443194423756818, guid: 86e868a6a1405e54a9f131481f6bd184, type: 2}
+  bulletSpeed: 35
+  travelTime: 1
+  recallSpeed: 70
+  knockback: {x: 0, y: 0, z: 0}
 --- !u!1 &1527339927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548878205
 GameObject:
@@ -1306,7 +1346,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548878205}
   m_LocalRotation: {x: 0, y: 0.8660254, z: -0, w: -0.5}
-  m_LocalPosition: {x: 22.5, y: 0, z: 15}
+  m_LocalPosition: {x: 24.46, y: 0, z: 16.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

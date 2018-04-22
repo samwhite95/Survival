@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
 
-
+    Slider healthSlider;
     Animator anim;
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
@@ -23,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio = GetComponent <AudioSource> ();
         hitParticles = GetComponentInChildren <ParticleSystem> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
+        healthSlider = GetComponentInChildren<Slider>();
 
         currentHealth = startingHealth;
     }
@@ -45,6 +47,8 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.Play ();
 
         currentHealth -= amount;
+
+        healthSlider.value = currentHealth;
             
         hitParticles.transform.position = hitPoint;
         hitParticles.Play();
@@ -59,7 +63,7 @@ public class EnemyHealth : MonoBehaviour
     void Death ()
     {
         isDead = true;
-
+        Destroy(transform.Find("Canvas").gameObject);
         capsuleCollider.isTrigger = true;
 
         anim.SetTrigger ("Dead");
@@ -76,5 +80,21 @@ public class EnemyHealth : MonoBehaviour
         isSinking = true;
         ScoreManager.score += scoreValue;
         Destroy (gameObject, 2f);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        if (isDead)
+            return;
+
+        enemyAudio.Play();
+
+        currentHealth -= amount;
+        healthSlider.value = currentHealth;
+        if (currentHealth <= 0)
+        {
+            Death();
+        }
+
     }
 }
