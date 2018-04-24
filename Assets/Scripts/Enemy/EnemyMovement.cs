@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
+    invisBomb invisBomb;
 
 
     void Awake ()
@@ -15,13 +16,16 @@ public class EnemyMovement : MonoBehaviour
         playerHealth = player.GetComponent <PlayerHealth> ();
         enemyHealth = GetComponent <EnemyHealth> ();
         nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
+        invisBomb = player.transform.Find("GunBarrelEnd").GetComponent<invisBomb>();
+
     }
 
 
     void Update ()
     {
-        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && !invisBomb.isInvis)
         {
+            nav.enabled = true;
             nav.SetDestination (player.position);
         }
         else

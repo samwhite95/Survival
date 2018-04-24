@@ -9,7 +9,7 @@ namespace CompleteProject
         PlayerHealth playerHealth;      // Reference to the player's health.
         EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-
+        invisBomb invisBomb;
 
         void Awake ()
         {
@@ -18,14 +18,16 @@ namespace CompleteProject
             playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
+            invisBomb = player.transform.Find("GunBarrelEnd").GetComponent<invisBomb>();
         }
 
 
         void Update ()
         {
             // If the enemy and the player have health left...
-            if(enemyHealth.currentHealth > 0/* && playerHealth.currentHealth > 0*/)
+            if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && !invisBomb.isInvis)
             {
+
                 // ... set the destination of the nav mesh agent to the player.
                 nav.SetDestination (player.transform.position);
             }
@@ -35,6 +37,10 @@ namespace CompleteProject
                 // ... disable the nav mesh agent.
                 nav.enabled = false;
             }
+
+
+
+            
         }
     }
 }

@@ -1180,6 +1180,21 @@ MonoBehaviour:
   travelTime: 1
   recallSpeed: 70
   knockback: {x: 0, y: 0, z: 0}
+--- !u!114 &1422449482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422449478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7706dd97e9c054e91e5461c8b85d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bomb: {fileID: 1317040115800312, guid: 3c12b89e2aa1db84eaa70775fc83df8c, type: 2}
+  CD: 10
+  invisTime: 3
+  isInvis: 0
 --- !u!1 &1527339927
 GameObject:
   m_ObjectHideFlags: 0
