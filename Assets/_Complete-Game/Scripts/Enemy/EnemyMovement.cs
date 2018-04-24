@@ -18,7 +18,7 @@ namespace CompleteProject
             playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent <EnemyHealth> ();
             nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
-            invisBomb = player.transform.Find("GunBarrelEnd").GetComponent<invisBomb>();
+            
         }
 
 
