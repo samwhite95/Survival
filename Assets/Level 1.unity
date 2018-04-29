@@ -1148,6 +1148,22 @@ Prefab:
       propertyPath: m_Drag
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1557670933022680, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565580577445870, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947781832000728, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842744532458788, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1aca220af0efb314c884444b1842f0c4, type: 2}
   m_IsPrefabParent: 0
@@ -1195,6 +1211,19 @@ MonoBehaviour:
   CD: 10
   invisTime: 3
   isInvis: 0
+--- !u!114 &1422449483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422449478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435679282c95c4f449d2989817397601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lsBullet: {fileID: 1756478915801906, guid: d2be67d7869397a4a8d85c68796cbba9, type: 2}
+  CD: 10
 --- !u!1 &1527339927
 GameObject:
   m_ObjectHideFlags: 0

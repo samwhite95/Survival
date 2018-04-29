@@ -13,7 +13,6 @@ public class BoomerangGun : MonoBehaviour {
 
     bool isOut;
     bool isRecall;
-    float outTimer;
     ParticleSystem gunParticles;
     AudioSource gunAudio;
     Light gunLight;
@@ -55,8 +54,7 @@ public class BoomerangGun : MonoBehaviour {
 
         gunParticles.Stop();
         gunParticles.Play();
-
-        outTimer = Time.time;
+        
         isOut = true;
 
         firedBullet = Instantiate(bullet,transform.position,transform.rotation);

@@ -9,7 +9,6 @@ namespace CompleteProject
         PlayerHealth playerHealth;      // Reference to the player's health.
         EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-        invisBomb invisBomb;
 
         void Awake ()
         {
@@ -25,7 +24,7 @@ namespace CompleteProject
         void Update ()
         {
             // If the enemy and the player have health left...
-            if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0 && !invisBomb.isInvis)
+            if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
             {
 
                 // ... set the destination of the nav mesh agent to the player.
